@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wFq-GP-cqm">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Boba_Run_PORTRAIT_GAME" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjp-uf-IDJ" userLabel="audio">
+                                <rect key="frame" x="177" y="802" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="QJN-v9-2NL"/>
+                                    <constraint firstAttribute="height" constant="60" id="V2h-AI-EXD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" image="unmute">
+                                    <color key="titleColor" red="0.94509803920000002" green="0.96078431369999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="audioButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="dlb-5i-XoQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="bottom" secondItem="Mjp-uf-IDJ" secondAttribute="bottom" id="AoS-no-tU5"/>
+                            <constraint firstItem="Mjp-uf-IDJ" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="rpg-eB-LYN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                    <connections>
+                        <outlet property="audioButton" destination="Mjp-uf-IDJ" id="F0q-yo-KBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="22.767857142857142"/>
+        </scene>
+        <!--Launch ScreenVC-->
+        <scene sceneID="cRE-Rc-nNf">
+            <objects>
+                <viewController id="wFq-GP-cqm" customClass="LaunchScreenVC" customModule="Boba_Run_PORTRAIT_GAME" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E5T-rk-bmZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="i0c-Tl-4Js">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Boba" translatesAutoresizingMaskIntoConstraints="NO" id="oUn-eH-sAW">
+                                <rect key="frame" x="78" y="480" width="258" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="T1P-dj-dVv"/>
+                                    <constraint firstAttribute="width" constant="258" id="mmx-RE-r8B"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Boba Run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbM-rF-skp">
+                                <rect key="frame" x="35.5" y="92" width="343" height="128"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1L-d4-Rdz" userLabel="toGameVCButton">
+                                <rect key="frame" x="-1.242424242424363" y="1.2242424242424477" width="414.00000000000006" height="896.00000000000011"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.2470588235" green="0.35294117650000001" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="toGameVC:" destination="wFq-GP-cqm" eventType="touchUpInside" id="HV7-qx-iUv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TAP TO PLAY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBk-zB-bwj">
+                                <rect key="frame" x="120" y="228" width="174" height="39"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" red="0.078431372550000003" green="0.23921568630000001" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8EP-C9-IeH" userLabel="HintLabel">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="c6C-vW-CPQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.61568627450980395" green="0.8862745098" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i0c-Tl-4Js" firstAttribute="leading" secondItem="lKQ-V6-iWk" secondAttribute="leading" id="4Ju-qn-vGm"/>
+                            <constraint firstItem="lKQ-V6-iWk" firstAttribute="trailing" secondItem="8EP-C9-IeH" secondAttribute="trailing" constant="20" id="5cr-bL-K9J"/>
+                            <constraint firstItem="8EP-C9-IeH" firstAttribute="leading" secondItem="lKQ-V6-iWk" secondAttribute="leading" constant="20" id="ALF-s7-ll9"/>
+                            <constraint firstItem="8EP-C9-IeH" firstAttribute="top" secondItem="oUn-eH-sAW" secondAttribute="bottom" constant="72" id="Bdn-RX-Qz7"/>
+                            <constraint firstAttribute="bottom" secondItem="i0c-Tl-4Js" secondAttribute="bottom" id="DqW-nj-wY2"/>
+                            <constraint firstItem="i0c-Tl-4Js" firstAttribute="trailing" secondItem="lKQ-V6-iWk" secondAttribute="trailing" id="HsJ-pH-qgh"/>
+                            <constraint firstItem="oUn-eH-sAW" firstAttribute="centerX" secondItem="E5T-rk-bmZ" secondAttribute="centerX" id="KR8-f1-Nbb"/>
+                            <constraint firstItem="8EP-C9-IeH" firstAttribute="bottom" secondItem="lKQ-V6-iWk" secondAttribute="bottom" id="LVe-fk-EMG"/>
+                            <constraint firstItem="P1L-d4-Rdz" firstAttribute="top" secondItem="E5T-rk-bmZ" secondAttribute="top" id="UIq-CF-bml"/>
+                            <constraint firstItem="fBk-zB-bwj" firstAttribute="centerX" secondItem="E5T-rk-bmZ" secondAttribute="centerX" id="W6t-Pu-6MB"/>
+                            <constraint firstItem="i0c-Tl-4Js" firstAttribute="top" secondItem="E5T-rk-bmZ" secondAttribute="top" id="Wc3-g0-wsz"/>
+                            <constraint firstItem="P1L-d4-Rdz" firstAttribute="leading" secondItem="lKQ-V6-iWk" secondAttribute="leading" id="Xjd-mo-dkq"/>
+                            <constraint firstAttribute="bottom" secondItem="P1L-d4-Rdz" secondAttribute="bottom" id="dkb-5b-N5a"/>
+                            <constraint firstItem="fBk-zB-bwj" firstAttribute="top" secondItem="GbM-rF-skp" secondAttribute="bottom" constant="8" id="kyC-hc-je7"/>
+                            <constraint firstItem="P1L-d4-Rdz" firstAttribute="trailing" secondItem="lKQ-V6-iWk" secondAttribute="trailing" id="lSq-x5-PDf"/>
+                            <constraint firstItem="GbM-rF-skp" firstAttribute="top" secondItem="lKQ-V6-iWk" secondAttribute="top" constant="48" id="mgY-fa-50W"/>
+                            <constraint firstItem="GbM-rF-skp" firstAttribute="centerX" secondItem="E5T-rk-bmZ" secondAttribute="centerX" id="vb9-uo-yXM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lKQ-V6-iWk"/>
+                    </view>
+                    <connections>
+                        <outlet property="HintLabel" destination="8EP-C9-IeH" id="MTd-h5-sHb"/>
+                        <outlet property="boImage" destination="oUn-eH-sAW" id="Hjz-SA-3Na"/>
+                        <outlet property="gameTitleLabel" destination="GbM-rF-skp" id="846-OA-mTm"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="toGameVC" modalTransitionStyle="crossDissolve" id="pAz-pg-1Jc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imz-DA-Gpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591.304347826087" y="22.767857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Boba" width="571" height="597"/>
+        <image name="background" width="828" height="1792"/>
+        <image name="unmute" width="100" height="100"/>
+    </resources>
+</document>
